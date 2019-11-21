@@ -10,10 +10,8 @@ for (let i = 0; i < squareColors.length; i++) {
     squareColors[i].addEventListener('click', clickSquare);
 }
 
-const square = document.querySelector('.square');
 
 function clickSquare(event) {
-    console.log(event.target.classList[1])
     event.target.classList.replace(grabColor(event.target), grabColor(currentBrush));
 }
 
