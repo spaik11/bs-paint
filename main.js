@@ -10,7 +10,6 @@ for (let i = 0; i < squareColors.length; i++) {
     squareColors[i].addEventListener('click', clickSquare);
 }
 
-
 function clickSquare(event) {
     event.target.classList.replace(grabColor(event.target), grabColor(currentBrush));
 }
@@ -25,7 +24,11 @@ function clickPalette(event) {
     currentBrush.classList.replace(grabColor(currentBrush), grabColor(event.target))
 }
 
+const addSquare = document.createElement('div');
+addSquare.classList.add('square');
+addSquare.classList.add('color-5');
 
-
+const addCanvas = document.querySelector('.canvas');
+addCanvas.appendChild(addSquare)
 
 
